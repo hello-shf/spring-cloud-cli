@@ -1,0 +1,37 @@
+server:
+  port: 8020
+  servlet:
+    context-path: /demo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6060/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: cloud-web-demo
+feign:
+  hystrix:
+    enabled: true
+management:
+  server:
+    port: 7001
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /monitor
+    health:
+      show-details: always
+#security:
+#  oauth2:
+#    client:
+#      access-token-uri: http://localhost:8090/portal/sso/oauth/token
+#      user-authorization-uri: http://localhost:8090/portal/sso/oauth/authorize
+#      client-id: demoClinet
+#      use-current-uri: false
+#    resource:
+#      user-info-uri: http://localhost:8090/portal/sso/user
+#      prefer-token-info: false
+debug: true

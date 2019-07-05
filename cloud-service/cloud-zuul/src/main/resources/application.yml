@@ -1,0 +1,59 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /portal
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6060/eureka/
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+zuul:
+  ignoreSecurityHeaders: false
+  sensitiveHeaders: #不忽略任何头部信息，所有header都转发到下游的资源服务器。上下游session共享
+  routes:
+    cloud-web-demo: /demo/**
+    cloud-auth-center: /sso/**
+    cloud-auth: /auth/**
+  retryable: false
+  add-proxy-headers: true
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8090/portal/sso/oauth/token
+      user-authorization-uri: http://localhost:8090/portal/sso/oauth/authorize
+      client-id: zuul-client
+      use-current-uri: false
+      client-secret: user123
+    resource:
+#      user-info-uri: http://localhost:8090/portal/sso/user
+#      prefer-token-info: false
+      jwt:
+        key-uri: http://localhost:8031/oauth/token_key
+spring:
+  application:
+    name: cloud-zuul
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    timeout: 500
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+        max-wait: -1ms
+jwt:
+  tokenHead: Bearer
+  header: Authorization
+  expiration: 1800
+  secret: mySecret
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+
