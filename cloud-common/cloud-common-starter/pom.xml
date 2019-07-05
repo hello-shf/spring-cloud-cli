@@ -17,11 +17,4 @@
     <modules>
         <module>shf-redis-spring-cloud-starter</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-        </dependency>
-    </dependencies>
 </project>

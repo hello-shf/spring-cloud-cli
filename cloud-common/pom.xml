@@ -13,16 +13,11 @@
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>Demo project for Spring Boot</description>
+
     <modules>
         <module>cloud-common-feign</module>
         <module>cloud-common-entity</module>
         <module>cloud-common-tool</module>
         <module>cloud-common-starter</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-    </dependencies>
 </project>

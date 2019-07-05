@@ -13,13 +13,10 @@
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>Demo project for Spring Boot</description>
+
     <modules>
         <module>cloud-auth-center</module>
         <module>cloud-zuul</module>
         <module>cloud-eureka</module>
     </modules>
-
-    <dependencies>
-
-    </dependencies>
 </project>

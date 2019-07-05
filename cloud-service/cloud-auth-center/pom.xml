@@ -18,6 +18,33 @@
     </properties>
 
     <dependencies>
+        <!--本地工程相关依赖-->
+        <dependency>
+            <groupId>com.shf</groupId>
+            <artifactId>cloud-common-tool</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.shf</groupId>
+            <artifactId>cloud-common-entity</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-data-jpa</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.shf</groupId>
+            <artifactId>cloud-common-feign</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.shf</groupId>
+                    <artifactId>cloud-common-entity</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--spring security相关依赖-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-data</artifactId>
@@ -33,36 +60,9 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-jwt</artifactId>
-            <version>1.0.9.RELEASE</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.shf</groupId>
-            <artifactId>cloud-common-tool</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.shf</groupId>
-            <artifactId>cloud-common-entity</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-data-jpa</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.shf</groupId>
-            <artifactId>cloud-common-feign</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.shf</groupId>
-                    <artifactId>cloud-common-entity</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        <!--通用依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -85,23 +85,22 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.0</version>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
 
+        <!--开发工具相关依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.15</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 

@@ -33,8 +33,8 @@ import java.io.PrintWriter;
 @EnableOAuth2Sso
 //@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
-    private CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
+//    @Autowired
+//    private CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -50,8 +50,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .logoutSuccessUrl("http://localhost:8090/portal/sso/logout")
                     .and()
                 .exceptionHandling()
-                    .accessDeniedHandler(accessDeniedHandler())
-                    .authenticationEntryPoint(customAuthenticationEntryPoint);//这个东东很重要，牵扯到未登录的重定向问题
+                    .accessDeniedHandler(accessDeniedHandler());
+//                    .authenticationEntryPoint(customAuthenticationEntryPoint);//这个东东很重要，牵扯到未登录的重定向问题
     }
 
     // 权限不足处理

@@ -18,6 +18,10 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <lombok.version>1.16.12</lombok.version>
+        <spring-cloud-cli.versiion>${project.version}</spring-cloud-cli.versiion>
+        <fastjson.version>1.2.15</fastjson.version>
+        <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
+        <jackjson.version>2.9.9</jackjson.version>
     </properties>
 
     <modules>
@@ -27,19 +31,54 @@
         <module>cloud-service</module>
         <module>cloud-web</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
-    </dependencies>
+
+    <!--依赖版本声明-->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.shf</groupId>
+                <artifactId>cloud-common-tool</artifactId>
+                <version>${spring-cloud-cli.versiion}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shf</groupId>
+                <artifactId>cloud-common-entity</artifactId>
+                <version>${spring-cloud-cli.versiion}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.shf</groupId>
+                <artifactId>cloud-common-feign</artifactId>
+                <version>${spring-cloud-cli.versiion}</version>
+            </dependency>
+
+            <!--spring security jwt 相关依赖-->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-jwt</artifactId>
+                <version>1.0.9.RELEASE</version>
+            </dependency>
+            <!--开发工具相关依赖版本声明-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackjson.version}</version>
+                <scope>compile</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>

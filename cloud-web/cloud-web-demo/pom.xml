@@ -19,10 +19,6 @@
     </properties>
         
     <dependencies>
-        <!--<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-security</artifactId>
-        </dependency>-->
         <dependency>
             <groupId>com.shf</groupId>
             <artifactId>cloud-common-tool</artifactId>
@@ -58,6 +54,18 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        
+        <!--工具依赖版本开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
