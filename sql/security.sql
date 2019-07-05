@@ -11,7 +11,7 @@
  Target Server Version : 50635
  File Encoding         : 65001
 
- Date: 05/07/2019 11:21:09
+ Date: 05/07/2019 11:30:24
 */
 
 SET NAMES utf8mb4;
@@ -142,9 +142,9 @@ CREATE TABLE `t_user`  (
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES (1, '学友', '1', NULL, 1, NULL, NULL);
+INSERT INTO `t_user` VALUES (1, '学友', 'C4CA4238A0B923820DCC509A6F75849B', NULL, 1, NULL, NULL);
 INSERT INTO `t_user` VALUES (2, '德华', 'C4CA4238A0B923820DCC509A6F75849B', NULL, 1, NULL, NULL);
-INSERT INTO `t_user` VALUES (3, '富城', '$2a$10$OZQn.4SaOB9sYn1E1yBdTe0Nd1rxbIpgT8GyRZ2teMm59U3.mUgZS', NULL, 1, NULL, NULL);
+INSERT INTO `t_user` VALUES (3, '富城', 'C4CA4238A0B923820DCC509A6F75849B', NULL, 1, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for t_user_role
