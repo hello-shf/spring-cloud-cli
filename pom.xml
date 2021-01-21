@@ -21,7 +21,7 @@
         <spring-cloud-cli.versiion>${project.version}</spring-cloud-cli.versiion>
         <fastjson.version>1.2.15</fastjson.version>
         <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
-        <jackjson.version>2.9.9</jackjson.version>
+        <jackjson.version>2.9.10.7</jackjson.version>
     </properties>
 
     <modules>
