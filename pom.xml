@@ -19,7 +19,7 @@
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <lombok.version>1.16.12</lombok.version>
         <spring-cloud-cli.versiion>${project.version}</spring-cloud-cli.versiion>
-        <fastjson.version>1.2.15</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
         <jackjson.version>2.9.9</jackjson.version>
     </properties>
